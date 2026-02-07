@@ -102,37 +102,8 @@
 
                 <!-- Previous Guesses -->
                 <div class="guesses-list" id="guessesList"></div>
-
                 <!-- Skip Button -->
                 <button class="btn btn--skip" id="skipBtn">Skip this logo</button>
-            </div>
-
-            <!-- Airplane Journey Progress -->
-            <div class="flight-progress" id="flightProgress">
-                <div class="flight-progress__track">
-                    <!-- Clouds/Destinations -->
-                    <div class="cloud cloud--1" data-stop="1">☁️</div>
-                    <div class="cloud cloud--2" data-stop="2">☁️</div>
-                    <div class="cloud cloud--3" data-stop="3">☁️</div>
-                    <div class="cloud cloud--4" data-stop="4">☁️</div>
-                    <div class="cloud cloud--5" data-stop="5">☁️</div>
-                    <div class="cloud cloud--6" data-stop="6">☁️</div>
-                    <div class="cloud cloud--7" data-stop="7">☁️</div>
-                    <div class="cloud cloud--8" data-stop="8">☁️</div>
-                    <div class="cloud cloud--9" data-stop="9">☁️</div>
-                    <div class="cloud cloud--10 cloud--destination" data-stop="10">🏝️</div>
-
-                    <!-- Airplane -->
-                    <div class="airplane" id="airplane">✈️</div>
-
-                    <!-- Flight path line -->
-                    <div class="flight-path">
-                        <div class="flight-path__completed" id="flightPathCompleted"></div>
-                    </div>
-                </div>
-                <div class="flight-progress__label">
-                    <span id="flightProgressText">Logo 1 of 10</span>
-                </div>
             </div>
         </main>
 
@@ -185,6 +156,34 @@
                 </div>
             </div>
         </main>
+
+        <!-- Airplane Journey Progress (Fixed Footer) -->
+        <div class="flight-progress" id="flightProgress">
+            <div class="flight-progress__track">
+                <!-- Clouds/Destinations -->
+                <div class="cloud cloud--1" data-stop="1">☁️</div>
+                <div class="cloud cloud--2" data-stop="2">☁️</div>
+                <div class="cloud cloud--3" data-stop="3">☁️</div>
+                <div class="cloud cloud--4" data-stop="4">☁️</div>
+                <div class="cloud cloud--5" data-stop="5">☁️</div>
+                <div class="cloud cloud--6" data-stop="6">☁️</div>
+                <div class="cloud cloud--7" data-stop="7">☁️</div>
+                <div class="cloud cloud--8" data-stop="8">☁️</div>
+                <div class="cloud cloud--9" data-stop="9">☁️</div>
+                <div class="cloud cloud--10 cloud--destination" data-stop="10">🏝️</div>
+
+                <!-- Airplane -->
+                <div class="airplane" id="airplane">✈️</div>
+
+                <!-- Flight path line -->
+                <div class="flight-path">
+                    <div class="flight-path__completed" id="flightPathCompleted"></div>
+                </div>
+            </div>
+            <div class="flight-progress__label">
+                <span id="flightProgressText">Logo 1 of 10</span>
+            </div>
+        </div>
     </div>
 
     <script src="scripts/game.js"></script>
