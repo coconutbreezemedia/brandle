@@ -597,7 +597,7 @@ function playAgain() {
 // Event Listeners
 // ========================================
 
-elements.startBtn.addEventListener('click', initGame);
+// NOTE: startBtn listener added after wrapping initGame below
 
 elements.submitBtn.addEventListener('click', submitGuess);
 
@@ -625,9 +625,10 @@ if (elements.flightProgress) {
     elements.flightProgress.style.display = 'none';
 }
 
-// Show progress when game starts
+// Wrap initGame to show flight progress
 const originalInitGame = initGame;
 initGame = function () {
+    // Show progress elements
     elements.progressContainer.style.visibility = 'visible';
     if (elements.flightProgress) {
         elements.flightProgress.style.display = 'block';
@@ -648,3 +649,6 @@ initGame = function () {
     // Update flight progress after game state is set
     updateFlightProgress();
 };
+
+// NOW add the start button listener (after wrapping)
+elements.startBtn.addEventListener('click', initGame);
