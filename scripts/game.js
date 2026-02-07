@@ -16,108 +16,144 @@ const TRAVEL_LOGOS = [
         id: 1,
         brand: "Airbnb",
         acceptedAnswers: ["airbnb", "air bnb", "air b n b"],
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Airbnb_Logo_B%C3%A9lo.svg/512px-Airbnb_Logo_B%C3%A9lo.svg.png",
+        image: "https://www.logo.wine/a/logo/Airbnb/Airbnb-Logo.wine.svg",
         category: "accommodation"
     },
     {
         id: 2,
         brand: "Emirates",
         acceptedAnswers: ["emirates", "emirates airlines", "fly emirates", "emirates airline"],
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Emirates_logo.svg/512px-Emirates_logo.svg.png",
+        image: "https://www.logo.wine/a/logo/Emirates_(airline)/Emirates_(airline)-Logo.wine.svg",
         category: "airline"
     },
     {
         id: 3,
         brand: "Booking.com",
         acceptedAnswers: ["booking", "booking.com", "bookingcom", "booking com"],
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Booking.com_logo.svg/512px-Booking.com_logo.svg.png",
+        image: "https://www.logo.wine/a/logo/Booking.com/Booking.com-Logo.wine.svg",
         category: "booking"
     },
     {
         id: 4,
         brand: "Delta",
         acceptedAnswers: ["delta", "delta airlines", "delta air lines", "delta airline"],
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Delta_logo.svg/512px-Delta_logo.svg.png",
+        image: "https://www.logo.wine/a/logo/Delta_Air_Lines/Delta_Air_Lines-Logo.wine.svg",
         category: "airline"
     },
     {
         id: 5,
         brand: "Marriott",
         acceptedAnswers: ["marriott", "marriott hotels", "marriott international", "marriott bonvoy"],
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Marriott_International_logo.svg/512px-Marriott_International_logo.svg.png",
+        image: "https://www.logo.wine/a/logo/Marriott_International/Marriott_International-Logo.wine.svg",
         category: "hotel"
     },
     {
         id: 6,
         brand: "TripAdvisor",
         acceptedAnswers: ["tripadvisor", "trip advisor", "trip", "ta"],
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Tripadvisor_Logo_circle-green_vertical-lockup_registered_RGB.svg/512px-Tripadvisor_Logo_circle-green_vertical-lockup_registered_RGB.svg.png",
+        image: "https://www.logo.wine/a/logo/TripAdvisor/TripAdvisor-Logo.wine.svg",
         category: "booking"
     },
     {
         id: 7,
         brand: "Southwest",
         acceptedAnswers: ["southwest", "southwest airlines", "southwest airline", "swa"],
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Southwest_Airlines_logo_2014.svg/512px-Southwest_Airlines_logo_2014.svg.png",
+        image: "https://www.logo.wine/a/logo/Southwest_Airlines/Southwest_Airlines-Logo.wine.svg",
         category: "airline"
     },
     {
         id: 8,
         brand: "Hilton",
         acceptedAnswers: ["hilton", "hilton hotels", "hilton worldwide", "hilton honors"],
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Hilton_Hotels_%26_Resorts_logo.svg/512px-Hilton_Hotels_%26_Resorts_logo.svg.png",
+        image: "https://www.logo.wine/a/logo/Hilton_Hotels_%26_Resorts/Hilton_Hotels_%26_Resorts-Logo.wine.svg",
         category: "hotel"
     },
     {
         id: 9,
         brand: "Expedia",
         acceptedAnswers: ["expedia", "expedia.com", "expedia group"],
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Expedia_2012_logo.svg/512px-Expedia_2012_logo.svg.png",
+        image: "https://www.logo.wine/a/logo/Expedia_Group/Expedia_Group-Logo.wine.svg",
         category: "booking"
     },
     {
         id: 10,
         brand: "United",
         acceptedAnswers: ["united", "united airlines", "united airline", "ual"],
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/United_Airlines_Logo.svg/512px-United_Airlines_Logo.svg.png",
+        image: "https://www.logo.wine/a/logo/United_Airlines/United_Airlines-Logo.wine.svg",
         category: "airline"
     },
     {
         id: 11,
         brand: "Royal Caribbean",
         acceptedAnswers: ["royal caribbean", "royalcaribbean", "rccl", "royal caribbean cruises", "royal carribean"],
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Royal_Caribbean_International_logo.svg/512px-Royal_Caribbean_International_logo.svg.png",
+        image: "https://www.logo.wine/a/logo/Royal_Caribbean_International/Royal_Caribbean_International-Logo.wine.svg",
         category: "cruise"
     },
     {
         id: 12,
         brand: "Uber",
         acceptedAnswers: ["uber", "uber ride", "uber rides"],
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Uber_logo_2018.svg/512px-Uber_logo_2018.svg.png",
+        image: "https://www.logo.wine/a/logo/Uber/Uber-Logo.wine.svg",
         category: "transport"
     },
     {
         id: 13,
         brand: "Kayak",
         acceptedAnswers: ["kayak", "kayak.com", "kayak travel"],
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Kayak_Logo_2017.png/512px-Kayak_Logo_2017.png",
+        image: "https://www.logo.wine/a/logo/Kayak.com/Kayak.com-Logo.wine.svg",
         category: "booking"
     },
     {
         id: 14,
         brand: "Hyatt",
         acceptedAnswers: ["hyatt", "hyatt hotels", "hyatt regency", "park hyatt"],
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Hyatt_Logo.svg/512px-Hyatt_Logo.svg.png",
+        image: "https://www.logo.wine/a/logo/Hyatt/Hyatt-Logo.wine.svg",
         category: "hotel"
     },
     {
         id: 15,
         brand: "JetBlue",
         acceptedAnswers: ["jetblue", "jet blue", "jetblue airways", "jet blue airways"],
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/JetBlue_Airways_Logo.svg/512px-JetBlue_Airways_Logo.svg.png",
+        image: "https://www.logo.wine/a/logo/JetBlue/JetBlue-Logo.wine.svg",
         category: "airline"
+    },
+    {
+        id: 16,
+        brand: "Vrbo",
+        acceptedAnswers: ["vrbo", "v r b o", "vacation rentals by owner", "homeaway"],
+        image: "https://www.logo.wine/a/logo/Vrbo/Vrbo-Logo.wine.svg",
+        category: "accommodation"
+    },
+    {
+        id: 17,
+        brand: "Lonely Planet",
+        acceptedAnswers: ["lonely planet", "lonelyplanet", "lp"],
+        image: "https://www.logo.wine/a/logo/Lonely_Planet/Lonely_Planet-Logo.wine.svg",
+        category: "media"
+    },
+    {
+        id: 18,
+        brand: "Carnival",
+        acceptedAnswers: ["carnival", "carnival cruise", "carnival cruises", "carnival cruise line", "carnival cruise lines"],
+        image: "https://www.logo.wine/a/logo/Carnival_Cruise_Line/Carnival_Cruise_Line-Logo.wine.svg",
+        category: "cruise"
+    },
+    {
+        id: 19,
+        brand: "Skyscanner",
+        acceptedAnswers: ["skyscanner", "sky scanner"],
+        image: "https://www.logo.wine/a/logo/Skyscanner/Skyscanner-Logo.wine.svg",
+        category: "booking"
+    },
+    {
+        id: 20,
+        brand: "I Love NY",
+        acceptedAnswers: ["i love ny", "i love new york", "i heart ny", "new york tourism", "visit new york", "nyc tourism"],
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/I_Love_New_York.svg/512px-I_Love_New_York.svg.png",
+        category: "dmo"
     }
 ];
+
 
 
 // Game State
