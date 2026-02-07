@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <rect width="200" height="200" fill="white"/>
+  <rect x="30" y="80" width="140" height="60" rx="8" fill="#D71921"/>
+  <text x="100" y="120" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="white" text-anchor="middle">EMIRATES</text>
+  <path d="M50 60 L100 30 L150 60" stroke="#D71921" stroke-width="4" fill="none"/>
+  <circle cx="100" cy="45" r="8" fill="#C5A572"/>
+</svg>

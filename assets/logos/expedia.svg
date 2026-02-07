@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <rect width="200" height="200" fill="white"/>
+  <rect x="30" y="75" width="140" height="50" rx="25" fill="#FFCC00"/>
+  <text x="100" y="110" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#1A1F71" text-anchor="middle">expedia</text>
+  <path d="M155 85 L175 65" stroke="#1A1F71" stroke-width="6" stroke-linecap="round"/>
+  <path d="M165 75 L180 70 L175 85" fill="#1A1F71"/>
+</svg>

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <rect width="200" height="200" fill="white"/>
+  <circle cx="100" cy="90" r="55" fill="#304CB2"/>
+  <path d="M55 90 L80 65 L100 90 L120 65 L145 90" stroke="#FFBF27" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M55 100 L80 75 L100 100 L120 75 L145 100" stroke="#E31837" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="100" y="170" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#304CB2" text-anchor="middle">Southwest</text>
+</svg>

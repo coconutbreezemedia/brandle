@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brandle - Travel Logo Guesser</title>
+    <meta name="description" content="Can you guess 10 travel logos? Test your wanderlust knowledge with Brandle!">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/main.css">
+
+    <!-- Confetti Library -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+
+<body>
+    <div class="app">
+        <!-- Header with Progress -->
+        <header class="header">
+            <div class="header__brand">
+                <span class="header__icon">✈️</span>
+                <h1 class="header__title">Brandle</h1>
+            </div>
+            <div class="header__progress" id="progressContainer">
+                <div class="progress-bar">
+                    <div class="progress-bar__fill" id="progressFill"></div>
+                </div>
+                <span class="progress-bar__text" id="progressText">0/10</span>
+            </div>
+        </header>
+
+        <!-- Welcome Screen -->
+        <main class="screen screen--welcome" id="welcomeScreen">
+            <div class="welcome">
+                <div class="welcome__icon">✈️🏨🌍</div>
+                <h2 class="welcome__title">Brandle</h2>
+                <p class="welcome__subtitle">Travel Logo Guesser</p>
+                <p class="welcome__description">
+                    Can you identify 10 travel logos from tiny glimpses?<br>
+                    Airlines, hotels, destinations & more!
+                </p>
+                <div class="welcome__rules">
+                    <div class="rule">
+                        <span class="rule__icon">🔍</span>
+                        <span class="rule__text">Start with a tiny crop</span>
+                    </div>
+                    <div class="rule">
+                        <span class="rule__icon">💡</span>
+                        <span class="rule__text">Wrong guesses reveal more</span>
+                    </div>
+                    <div class="rule">
+                        <span class="rule__icon">⭐</span>
+                        <span class="rule__text">Fewer guesses = more stars</span>
+                    </div>
+                    <div class="rule">
+                        <span class="rule__icon">🎉</span>
+                        <span class="rule__text">Get all 10 for confetti!</span>
+                    </div>
+                </div>
+                <button class="btn btn--primary btn--large" id="startBtn">
+                    Start Game
+                </button>
+            </div>
+        </main>
+
+        <!-- Game Screen -->
+        <main class="screen screen--game hidden" id="gameScreen">
+            <div class="game">
+                <!-- Stars earned this round -->
+                <div class="game__stars" id="starsDisplay">
+                    <span class="star">☆</span>
+                    <span class="star">☆</span>
+                    <span class="star">☆</span>
+                    <span class="star">☆</span>
+                    <span class="star">☆</span>
+                    <span class="star">☆</span>
+                </div>
+
+                <!-- Logo Container -->
+                <div class="logo-container" id="logoContainer">
+                    <div class="logo-wrapper" id="logoWrapper">
+                        <img src="" alt="Mystery Logo" class="logo-image" id="logoImage">
+                    </div>
+                    <div class="logo-reveal-level" id="revealLevel">Level 1/6</div>
+                </div>
+
+                <!-- Guess Input -->
+                <div class="guess-section">
+                    <div class="input-wrapper">
+                        <input type="text" class="guess-input" id="guessInput" placeholder="Enter brand name..."
+                            autocomplete="off" autocapitalize="off">
+                        <button class="btn btn--submit" id="submitBtn">→</button>
+                    </div>
+                    <div class="guess-feedback hidden" id="guessFeedback"></div>
+                </div>
+
+                <!-- Previous Guesses -->
+                <div class="guesses-list" id="guessesList"></div>
+
+                <!-- Skip Button -->
+                <button class="btn btn--skip" id="skipBtn">Skip this logo</button>
+            </div>
+
+            <!-- Airplane Journey Progress -->
+            <div class="flight-progress" id="flightProgress">
+                <div class="flight-progress__track">
+                    <!-- Clouds/Destinations -->
+                    <div class="cloud cloud--1" data-stop="1">☁️</div>
+                    <div class="cloud cloud--2" data-stop="2">☁️</div>
+                    <div class="cloud cloud--3" data-stop="3">☁️</div>
+                    <div class="cloud cloud--4" data-stop="4">☁️</div>
+                    <div class="cloud cloud--5" data-stop="5">☁️</div>
+                    <div class="cloud cloud--6" data-stop="6">☁️</div>
+                    <div class="cloud cloud--7" data-stop="7">☁️</div>
+                    <div class="cloud cloud--8" data-stop="8">☁️</div>
+                    <div class="cloud cloud--9" data-stop="9">☁️</div>
+                    <div class="cloud cloud--10 cloud--destination" data-stop="10">🏝️</div>
+
+                    <!-- Airplane -->
+                    <div class="airplane" id="airplane">✈️</div>
+
+                    <!-- Flight path line -->
+                    <div class="flight-path">
+                        <div class="flight-path__completed" id="flightPathCompleted"></div>
+                    </div>
+                </div>
+                <div class="flight-progress__label">
+                    <span id="flightProgressText">Logo 1 of 10</span>
+                </div>
+            </div>
+        </main>
+
+        <!-- Logo Result Screen (between logos) -->
+        <main class="screen screen--logo-result hidden" id="logoResultScreen">
+            <div class="logo-result">
+                <div class="logo-result__status" id="logoResultStatus">✓</div>
+                <div class="logo-result__image-container">
+                    <img src="" alt="Logo" class="logo-result__image" id="resultLogoImage">
+                </div>
+                <h3 class="logo-result__brand" id="resultBrand">Brand Name</h3>
+                <div class="logo-result__stars" id="resultStars"></div>
+                <p class="logo-result__message" id="resultMessage"></p>
+                <button class="btn btn--primary" id="nextLogoBtn">
+                    Next Logo →
+                </button>
+            </div>
+        </main>
+
+        <!-- Final Results Screen -->
+        <main class="screen screen--results hidden" id="resultsScreen">
+            <div class="results">
+                <h2 class="results__title" id="resultsTitle">Great Job!</h2>
+                <div class="results__score">
+                    <span class="results__correct" id="resultsCorrect">8</span>
+                    <span class="results__divider">/</span>
+                    <span class="results__total">10</span>
+                </div>
+                <div class="results__stars">
+                    <span class="results__stars-count" id="totalStars">42</span>
+                    <span class="results__stars-icon">⭐</span>
+                </div>
+
+                <!-- Results Grid -->
+                <div class="results__grid" id="resultsGrid"></div>
+
+                <!-- Action Buttons -->
+                <div class="results__actions">
+                    <button class="btn btn--primary" id="shareBtn">
+                        📋 Share Results
+                    </button>
+                    <button class="btn btn--secondary" id="playAgainBtn">
+                        🔄 Play Again
+                    </button>
+                </div>
+
+                <!-- Share Toast -->
+                <div class="toast hidden" id="shareToast">
+                    Copied to clipboard! ✓
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="scripts/game.js"></script>
+</body>
+
+</html>

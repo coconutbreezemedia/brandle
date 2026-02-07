@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <rect width="200" height="200" fill="white"/>
+  <text x="100" y="95" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="#104C97" text-anchor="middle">H</text>
+  <text x="100" y="135" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#104C97" text-anchor="middle">HILTON</text>
+  <rect x="40" y="145" width="120" height="3" fill="#104C97"/>
+</svg>

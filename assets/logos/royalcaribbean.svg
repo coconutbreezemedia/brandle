@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <rect width="200" height="200" fill="white"/>
+  <circle cx="100" cy="90" r="50" fill="#0073CF"/>
+  <path d="M60 100 Q80 60 100 80 Q120 100 140 70" stroke="#FFD700" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <path d="M55 110 Q80 80 110 95 Q140 110 155 85" stroke="white" stroke-width="4" fill="none"/>
+  <text x="100" y="165" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#0073CF" text-anchor="middle">ROYAL CARIBBEAN</text>
+</svg>

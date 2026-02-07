@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <rect width="200" height="200" fill="white"/>
+  <circle cx="100" cy="90" r="50" fill="#003876"/>
+  <path d="M60 90 L85 55 L100 75 L115 55 L140 90" stroke="white" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="100" y="165" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#003876" text-anchor="middle">JetBlue</text>
+</svg>

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <rect width="200" height="200" fill="white"/>
+  <text x="100" y="90" font-family="Georgia, serif" font-size="32" font-weight="bold" fill="#8C1515" text-anchor="middle">Marriott</text>
+  <text x="100" y="120" font-family="Georgia, serif" font-size="14" fill="#8C1515" text-anchor="middle">BONVOY</text>
+  <path d="M40 135 L160 135" stroke="#C5A47E" stroke-width="2"/>
+  <circle cx="100" cy="150" r="6" fill="#C5A47E"/>
+</svg>
