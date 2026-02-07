@@ -151,6 +151,13 @@ const TRAVEL_LOGOS = [
         acceptedAnswers: ["i love ny", "i love new york", "i heart ny", "new york tourism", "visit new york", "nyc tourism"],
         image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/I_Love_New_York.svg/512px-I_Love_New_York.svg.png",
         category: "dmo"
+    },
+    {
+        id: 21,
+        brand: "Matador Network",
+        acceptedAnswers: ["matador", "matador network", "matadornetwork"],
+        image: "https://seekvectorlogo.com/wp-content/uploads/2022/02/matador-network-vector-logo-2022.png",
+        category: "media"
     }
 ];
 
