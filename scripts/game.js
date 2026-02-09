@@ -161,6 +161,39 @@ const TRAVEL_LOGOS = [
     }
 ];
 
+// Validated logos (populated after preloading)
+let validatedLogos = [];
+
+// Preload and validate all logo images
+async function preloadLogos() {
+    const results = await Promise.allSettled(
+        TRAVEL_LOGOS.map(logo => {
+            return new Promise((resolve, reject) => {
+                const img = new Image();
+                img.onload = () => resolve(logo);
+                img.onerror = () => {
+                    console.warn(`Logo failed to load: ${logo.brand} - ${logo.image}`);
+                    reject(logo);
+                };
+                img.src = logo.image;
+            });
+        })
+    );
+
+    validatedLogos = results
+        .filter(result => result.status === 'fulfilled')
+        .map(result => result.value);
+
+    console.log(`Loaded ${validatedLogos.length}/${TRAVEL_LOGOS.length} logos successfully`);
+
+    // Update totalLogos config if we have fewer valid logos
+    if (validatedLogos.length < GAME_CONFIG.totalLogos) {
+        GAME_CONFIG.totalLogos = Math.min(validatedLogos.length, 10);
+    }
+
+    return validatedLogos;
+}
+
 
 
 // Game State
@@ -267,7 +300,7 @@ function initGame() {
     gameState = {
         currentLogoIndex: 0,
         currentAttempt: 1,
-        currentLogos: shuffleArray(TRAVEL_LOGOS).slice(0, GAME_CONFIG.totalLogos),
+        currentLogos: shuffleArray(validatedLogos).slice(0, GAME_CONFIG.totalLogos),
         guesses: [],
         results: [],
         totalStars: 0,
@@ -696,3 +729,8 @@ initGame = function () {
 
 // NOW add the start button listener (after wrapping)
 elements.startBtn.addEventListener('click', initGame);
+
+// Preload logos on page load
+preloadLogos().then(() => {
+    console.log('Logo preloading complete. Ready to play!');
+});
