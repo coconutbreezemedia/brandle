@@ -4,7 +4,7 @@
 
 // Game Configuration
 const GAME_CONFIG = {
-    totalLogos: 10,
+    totalLogos: 5,
     attemptsPerLogo: 6,
     revealLevels: [10, 25, 45, 65, 85, 100],
     maxStarsPerLogo: 6
